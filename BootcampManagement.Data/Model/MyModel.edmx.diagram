@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="bcf69fce689647639fb5d9bb270d26fe" Name="Diagram1">
+        <EntityTypeShape EntityType="BootcampManagementModel.Access_Card" Width="1.5" PointX="12.75" PointY="52.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BootcampManagementModel.Achievement" Width="1.5" PointX="12" PointY="35.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BootcampManagementModel.Aspect" Width="1.5" PointX="15" PointY="60.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BootcampManagementModel.Batch" Width="1.5" PointX="9.75" PointY="26.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BootcampManagementModel.Batch_Class" Width="1.5" PointX="12" PointY="38.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BootcampManagementModel.Category" Width="1.5" PointX="7.5" PointY="58.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BootcampManagementModel.Certification" Width="1.5" PointX="12.75" PointY="22.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BootcampManagementModel.Class" Width="1.5" PointX="12.75" PointY="26.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BootcampManagementModel.Company" Width="1.5" PointX="9.75" PointY="30.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BootcampManagementModel.Degree" Width="1.5" PointX="9.75" PointY="51.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BootcampManagementModel.District" Width="1.5" PointX="5.25" PointY="32.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BootcampManagementModel.Education" Width="1.5" PointX="12" PointY="47.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BootcampManagementModel.Education_History" Width="1.5" PointX="14.25" PointY="41.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BootcampManagementModel.Employee" Width="1.5" PointX="9.75" PointY="34.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BootcampManagementModel.Employee_Access" Width="1.5" PointX="15" PointY="37.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BootcampManagementModel.Employee_Certification" Width="1.5" PointX="15" PointY="33.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BootcampManagementModel.Employee_Language" Width="1.5" PointX="17" PointY="41.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BootcampManagementModel.Employee_Locker" Width="1.5" PointX="18" PointY="37.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BootcampManagementModel.Employee_Role" Width="1.5" PointX="18" PointY="33.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BootcampManagementModel.Employee_Skill" Width="1.5" PointX="12" PointY="43.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BootcampManagementModel.Error_Bank" Width="1.5" PointX="15" PointY="29.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BootcampManagementModel.Evaluation" Width="1.5" PointX="15" PointY="45.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BootcampManagementModel.Id_Card" Width="1.5" PointX="12" PointY="74" IsExpanded="true" />
+        <EntityTypeShape EntityType="BootcampManagementModel.Language" Width="1.5" PointX="14.75" PointY="56.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BootcampManagementModel.Lesson" Width="1.5" PointX="12.75" PointY="59.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BootcampManagementModel.Locker" Width="1.5" PointX="15.75" PointY="49.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BootcampManagementModel.Major" Width="1.5" PointX="9.75" PointY="54.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BootcampManagementModel.Member" Width="1.5" PointX="19.25" PointY="41.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BootcampManagementModel.Organization" Width="1.5" PointX="12" PointY="77.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BootcampManagementModel.Parameter" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BootcampManagementModel.Placement" Width="1.5" PointX="12" PointY="30.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BootcampManagementModel.Province" Width="1.5" PointX="0.75" PointY="32.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BootcampManagementModel.Regency" Width="1.5" PointX="3" PointY="32.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BootcampManagementModel.Religion" Width="1.5" PointX="7.5" PointY="37.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BootcampManagementModel.Role" Width="1.5" PointX="15.75" PointY="25.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BootcampManagementModel.Room" Width="1.5" PointX="9.75" PointY="44.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BootcampManagementModel.Score" Width="1.5" PointX="17.25" PointY="45.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BootcampManagementModel.Skill" Width="1.5" PointX="9.75" PointY="58.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BootcampManagementModel.Topic" Width="1.5" PointX="12.75" PointY="63.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BootcampManagementModel.University" Width="1.5" PointX="9.75" PointY="47.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BootcampManagementModel.Village" Width="1.5" PointX="7.5" PointY="32.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BootcampManagementModel.Work_Experience" Width="1.5" PointX="12" PointY="80.625" IsExpanded="true" />
+        <AssociationConnector Association="BootcampManagementModel.FK_Employee_Access_Access" ManuallyRouted="false" />
+        <AssociationConnector Association="BootcampManagementModel.FK_Achievement_Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="BootcampManagementModel.FK_Score_Aspect" ManuallyRouted="false" />
+        <AssociationConnector Association="BootcampManagementModel.FK_Batch_Class_Batch" ManuallyRouted="false" />
+        <AssociationConnector Association="BootcampManagementModel.FK_Batch_Class_Class" ManuallyRouted="false" />
+        <AssociationConnector Association="BootcampManagementModel.FK_Batch_Class_Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="BootcampManagementModel.FK_Batch_Class_Room" ManuallyRouted="false" />
+        <AssociationConnector Association="BootcampManagementModel.FK_Member_Batch_Class" ManuallyRouted="false" />
+        <AssociationConnector Association="BootcampManagementModel.FK_Skill_Category" ManuallyRouted="false" />
+        <AssociationConnector Association="BootcampManagementModel.FK_Employee_Certification_Certification" ManuallyRouted="false" />
+        <AssociationConnector Association="BootcampManagementModel.FK_Error_Bank_Class" ManuallyRouted="false" />
+        <AssociationConnector Association="BootcampManagementModel.FK_Lesson_Class" ManuallyRouted="false" />
+        <AssociationConnector Association="BootcampManagementModel.FK_Company_Village" ManuallyRouted="false" />
+        <AssociationConnector Association="BootcampManagementModel.FK_Placement_Company" ManuallyRouted="false" />
+        <AssociationConnector Association="BootcampManagementModel.FK_Education_Degree" ManuallyRouted="false" />
+        <AssociationConnector Association="BootcampManagementModel.FK_District_Regency" ManuallyRouted="false" />
+        <AssociationConnector Association="BootcampManagementModel.FK_Village_District" ManuallyRouted="false" />
+        <AssociationConnector Association="BootcampManagementModel.FK_Education_History_Education" ManuallyRouted="false" />
+        <AssociationConnector Association="BootcampManagementModel.FK_Education_Major" ManuallyRouted="false" />
+        <AssociationConnector Association="BootcampManagementModel.FK_Education_University" ManuallyRouted="false" />
+        <AssociationConnector Association="BootcampManagementModel.FK_Education_History_Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="BootcampManagementModel.FK_Employee_Access_Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="BootcampManagementModel.FK_Employee_Certification_Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="BootcampManagementModel.FK_Employee_Hiring_Location" ManuallyRouted="false" />
+        <AssociationConnector Association="BootcampManagementModel.FK_Employee_Language_Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="BootcampManagementModel.FK_Employee_Locker_Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="BootcampManagementModel.FK_Employee_PlaceOfBirth" ManuallyRouted="false" />
+        <AssociationConnector Association="BootcampManagementModel.FK_Employee_Religion" ManuallyRouted="false" />
+        <AssociationConnector Association="BootcampManagementModel.FK_Employee_Role_Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="BootcampManagementModel.FK_Employee_Skill_Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="BootcampManagementModel.FK_Employee_Village" ManuallyRouted="false" />
+        <AssociationConnector Association="BootcampManagementModel.FK_Error_Bank_Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="BootcampManagementModel.FK_Evaluation_Member" ManuallyRouted="false" />
+        <AssociationConnector Association="BootcampManagementModel.FK_Id_Card_Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="BootcampManagementModel.FK_Member_Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="BootcampManagementModel.FK_Member_Trainer" ManuallyRouted="false" />
+        <AssociationConnector Association="BootcampManagementModel.FK_Organization_Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="BootcampManagementModel.FK_Placement_Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="BootcampManagementModel.FK_Work_Experience_Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="BootcampManagementModel.FK_Employee_Language_Language" ManuallyRouted="false" />
+        <AssociationConnector Association="BootcampManagementModel.FK_Employee_Locker_Locker" ManuallyRouted="false" />
+        <AssociationConnector Association="BootcampManagementModel.FK_Employee_Role_Role" ManuallyRouted="false" />
+        <AssociationConnector Association="BootcampManagementModel.FK_Employee_Skill_Skill" ManuallyRouted="false" />
+        <AssociationConnector Association="BootcampManagementModel.FK_Evaluation_Lesson" ManuallyRouted="false" />
+        <AssociationConnector Association="BootcampManagementModel.FK_Evaluation_Topic" ManuallyRouted="false" />
+        <AssociationConnector Association="BootcampManagementModel.FK_Score_Evaluation" ManuallyRouted="false" />
+        <AssociationConnector Association="BootcampManagementModel.FK_Regency_Province" ManuallyRouted="false" />
+        <AssociationConnector Association="BootcampManagementModel.FK_University_Village" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
