@@ -1,45 +1,22 @@
 ﻿$(document).ready(function () {
-    LoadIndexProvince();
     $('#table').DataTable({
-        "ajax": LoadIndexProvince()
-    });
+        "ajax": LoadIndexLocker()
+    })
 })
 
-function Save() {
-    var province = new Object();
-    province.name = $('#Name').val();
-    $.ajax({
-        url: "/Provinces/InsertOrUpdate/",
-        data: province,
-        success: function (result) {
-            swal({
-                title: "Saved!",
-                text: "That data has been save!",
-                type: "success"
-            },
-            function () {
-                $('#myModal').modal('hide');
-            });
-            LoadIndexProvince();
-            $('#myModal').modal('hide');
-            ClearScreen();
-        }
-    });
-};
-
-function LoadIndexProvince() {
+function LoadIndexLocker() {
     $.ajax({
         type: "GET",
         async: false,
-        url: "/Provinces/LoadProvince/",
+        url: "/Lockers/LoadLocker/",
         dateType: "json",
         success: function (data) {
             var html = '';
             var i = 1;
             $.each(data, function (index, val) {
                 html += '<tr>';
-                html += '<td>' + i + '</td>';   
-                html += '<td>' + val.Name + '</td>';
+                html += '<td>' + i + '</td>';
+                html += '<td>' + val.LockerNumber + '</td>';
                 html += '<td> <a href="#" class="fa fa-pencil" onclick="return GetById(' + val.Id + ')"></a>';
                 html += ' | <a href="#" class="fa fa-trash" onclick="return Delete(' + val.Id + ')"></a></td>';
                 html += '</tr>';
@@ -50,38 +27,63 @@ function LoadIndexProvince() {
     });
 }
 
-function Edit() {
-    var province = new Object();
-    province.id = $('#Id').val();
-    province.name = $('#Name').val();
+function Save() {
+    debugger;
+    var locker = new Object();
+    locker.LockerNumber = $('#LockerNumber').val();
     $.ajax({
-        url: "/Provinces/InsertOrUpdate/",
-        data: province,
+        url: '/Lockers/InsertOrUpdate/',
+        data: locker,
+        success: function (result) {
+            console.log(result);
+            swal({
+                title: "Saved!",
+                text: "That data has been save!",
+                type: "success"
+            },
+                function () {
+                    $('#myModal').modal('hide');
+                });
+            LoadIndexLocker();
+            ClearScreen();
+        }
+    });
+}
+
+function Edit() {
+    var department = new Object();
+    department.id = $('#LockerNumber').val();
+    department.LockerName = $('#LockerNumber').val();
+    $.ajax({
+        url: '/Lockers/InsertOrUpdate/',
+        data: LockerVM,
+        type: "PUT",
         success: function (result) {
             swal({
                 title: "Saved!",
                 text: "That data has been save!",
                 type: "success"
             },
-            function () {
-                $('#myModal').modal('hide');
-            });
-            LoadIndexProvince();
-            
+                function () {
+                    $('#myModal').modal('hide');
+                });
+            LoadIndexLocker();
             ClearScreen();
         }
     });
-};
+}
 
 function GetById(Id) {
+    debugger;
     $.ajax({
-        url: "/Provinces/GetById/",
+        url: '/Lockers/GetById/',
+        data: { id: Id },
         type: "GET",
         dataType: "json",
-        data: { id : Id },
         success: function (result) {
-            $('#Id').val(result.Id);
-            $('#Name').val(result.Name);
+            console.log(result);
+            $('#LockerNumber').val(result.LockerNumber);
+			$('#Id').val(result.Id);
 
             $('#myModal').modal('show');
             $('#Update').show();
@@ -101,7 +103,7 @@ function Delete(Id) {
         closeOnConfirm: false
     }, function () {
         $.ajax({
-            url: "/Provinces/Delete/",
+            url: '/Lockers/Delete/',
             data: { id: Id },
             success: function (response) {
                 swal({
@@ -110,7 +112,7 @@ function Delete(Id) {
                     type: "success"
                 },
                     function () {
-                        LoadIndexProvince();
+                        LoadIndexLocker();
                     });
             },
             error: function (response) {
@@ -121,15 +123,16 @@ function Delete(Id) {
 }
 
 function ClearScreen() {
-    $('#Name').val('');
+    $('#LockerName').val('');
     $('#Id').val('');
     $('#Update').hide();
     $('#Save').show();
 }
 
 function Validate() {
-    if ($('#Name').val() == "" || $('#Name').val() == " ") {
-        swal("Oops", "Please Insert Name", "error")
+    debugger;
+    if ($('#LockerName').val() == "" || $('#LockerName').val() == " ") {
+        swal("Oops", "Please Insert LockerName", "error")
     } else if ($('#Id').val() == "") {
         Save();
     } else {

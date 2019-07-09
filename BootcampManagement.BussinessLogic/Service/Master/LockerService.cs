@@ -9,29 +9,29 @@ using BootcampManagement.Data.Param;
 
 namespace BootcampManagement.BussinessLogic.Service.Master
 {
-    public class CompanyService : ICompanyService
+    public class LockerService : ILockerService
     {
         bool status = false;
 
-        private readonly ICompanyRepository _companyRepository;
+        private readonly ILockerRepository _lockerRepository;
 
-        public CompanyService(ICompanyRepository companyRepository)
+        public LockerService(ILockerRepository lockerRepository)
         {
-            _companyRepository = companyRepository;
+            _lockerRepository = lockerRepository;
         }
 
-        public bool Delete(int? id)
+        public bool Delete(string id)
         {
             if (id == null)
             {
                 throw new NullReferenceException();
             }
-            return _companyRepository.Delete(id);
+            return _lockerRepository.Delete(id);
         }
 
-        public List<Company> Get()
+        public List<Locker> Get()
         {
-            var get = _companyRepository.Get();
+            var get = _lockerRepository.Get();
             if (get == null)
             {
                 throw new NullReferenceException();
@@ -39,13 +39,13 @@ namespace BootcampManagement.BussinessLogic.Service.Master
             return get;
         }
 
-        public Company Get(int? id)
+        public Locker Get(string id)
         {
             if (id == null)
             {
                 throw new NullReferenceException();
             }
-            var get = _companyRepository.Get(id);
+            var get = _lockerRepository.Get(id);
             if (get == null)
             {
                 throw new NullReferenceException();
@@ -53,41 +53,41 @@ namespace BootcampManagement.BussinessLogic.Service.Master
             return get;
         }
 
-        public bool Insert(CompanyParam companyParam)
+        public bool Insert(LockerParam lockerParam)
         {
-            if (companyParam == null)
+            if (lockerParam == null)
             {
-                throw new NullReferenceException();
+                return false;
             }
-            else if (companyParam.Name == " " || companyParam.Address == " " || companyParam.Village_Id.ToString() == " ")
+            else if (lockerParam.LockerNumber == " ")
             {
                 status = false;
             }
             else
             {
-                status = _companyRepository.Insert(companyParam);
+                status = _lockerRepository.Insert(lockerParam);
             }
             return status;
         }
 
-        public bool Update(int? id, CompanyParam companyParam)
+        public bool Update(string id, LockerParam lockerParam)
         {
             if (id == null)
             {
-                throw new NullReferenceException();
+                return false;
             }
             var get = Get(id);
-            if (companyParam == null)
+            if (lockerParam == null)
             {
-                throw new NullReferenceException();
+                return false;
             }
-            else if (companyParam.Name == " " || companyParam.Address == " " || companyParam.Village_Id.ToString() == " ")
+            else if (lockerParam.LockerNumber == " ")
             {
                 status = false;
             }
             else
             {
-                status = _companyRepository.Update(id, companyParam);
+                status = _lockerRepository.Update(id, lockerParam);
             }
             return status;
         }

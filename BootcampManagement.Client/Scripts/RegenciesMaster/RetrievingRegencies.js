@@ -23,10 +23,9 @@ function Save() {
                 type: "success"
             },
                 function () {
-                    window.location.href = '/Regencies/Index/';
+                    $('#myModal').modal('hide');
                 });
             LoadIndexRegency();
-            $('#myModal').modal('hide');
             ClearScreen();
         },
         error: function () {
@@ -83,10 +82,9 @@ function Edit() {
                 type: "success"
             },
                 function () {
-                    window.location.href = '/Regencies/Index/';
+                    $('#myModal').modal('hide');
                 });
             LoadIndexRegency();
-            $('#myModal').modal('hide');
             $('#Update').hide();
             $('#Save').show();
             ClearScreen();
@@ -137,7 +135,7 @@ function Delete(Id) {
                     type: "success"
                 },
                     function () {
-                        window.location.href = '/Regencies/Index/';
+                        LoadIndexRegency();
                     });
             },
             error: function (response) {
