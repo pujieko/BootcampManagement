@@ -37,7 +37,7 @@ function Save() {
                 type: "success"
             },
                 function () {
-                    window.location.href = '/Batches/Index/';
+                    $('#myModal').modal('hide');
                 });
             LoadIndexBatch();
             $('#myModal').modal('hide');
@@ -91,10 +91,9 @@ function Edit() {
                 type: "success"
             },
                 function () {
-                    window.location.href = '/Batches/Index/';
+                    $('#myModal').modal('hide');
                 });
             LoadIndexBatch();
-            $('#myModal').modal('hide');
             ClearScreen();
         }
     });
@@ -142,7 +141,7 @@ function Delete(Id) {
                     type: "success"
                 },
                     function () {
-                        window.location.href = '/Batches/Index/';
+                        LoadIndexBatch();
                     });
             },
             error: function (response) {

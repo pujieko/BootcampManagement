@@ -20,10 +20,9 @@ function Save() {
                 type: "success"
             },
             function () {
-                window.location.href = '/Lessons/Index/';
+                $('#myModal').modal('hide');
             });
             LoadIndexLesson();
-            $('#myModal').modal('hide');
             ClearScreen();
         }
     });
@@ -68,10 +67,9 @@ function Edit() {
                 type: "success"
             },
             function () {
-                window.location.href = '/Lessons/Index/';
+                $('#myModal').modal('hide');
             });
             LoadIndexLesson();
-            $('#myModal').modal('hide');
             ClearScreen();
         }
     });
@@ -115,7 +113,7 @@ function Delete(Id) {
                     type: "success"
                 },
                     function () {
-                        window.location.href = '/Lessons/Index/';
+                        LoadIndexLesson();
                     });
             },
             error: function (response) {

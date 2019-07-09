@@ -19,10 +19,9 @@ function Save() {
                 type: "success"
             },
                 function () {
-                    window.location.href = '/Rooms/Index/';
+                    $('#myModal').modal('hide');
                 });
             LoadIndexRoom();
-            $('#myModal').modal('hide');
             ClearScreen();
         }
     });
@@ -65,10 +64,9 @@ function Edit() {
                 type: "success"
             },
                 function () {
-                    window.location.href = '/Rooms/Index/';
+                    $('#myModal').modal('hide');
                 });
             LoadIndexRoom();
-            $('#myModal').modal('hide');
             ClearScreen();
         }
     });
@@ -112,7 +110,7 @@ function Delete(Id) {
                     type: "success"
                 },
                     function () {
-                        window.location.href = '/Rooms/Index/';
+                        LoadIndexRoom();
                     });
             },
             error: function (response) {

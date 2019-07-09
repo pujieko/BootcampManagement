@@ -20,10 +20,9 @@ function Save() {
                 type: "success"
             },
                 function () {
-                    window.location.href = '/Religions/Index/';
+                    $('#myModal').modal('hide');
                 });
             LoadIndexReligion();
-            $('#myModal').modal('hide');
             ClearScreen();
         }
     });
@@ -68,10 +67,9 @@ function Edit() {
                 type: "success"
             },
                 function () {
-                    window.location.href = '/Religions/Index/';
+                    $('#myModal').modal('hide');
                 });
             LoadIndexReligion();
-            $('#myModal').modal('hide');
             ClearScreen();
         }
     });
@@ -115,7 +113,7 @@ function Delete(Id) {
                     type: "success"
                 },
                     function () {
-                        window.location.href = '/Religions/Index/';
+                        LoadIndexReligion();
                     });
             },
             error: function (response) {

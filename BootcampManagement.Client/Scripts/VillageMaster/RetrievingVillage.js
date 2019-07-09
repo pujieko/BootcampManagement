@@ -53,10 +53,9 @@ function Save() {
                 type: "success"
             },
                 function () {
-                    window.location.href = '/Villages/Index/';
+                    $('#myModal').modal('hide');
                 });
             LoadIndexVillage();
-            $('#myModal').modal('hide');
             ClearScreen();
         }
     });
@@ -79,10 +78,9 @@ function Edit() {
                 type: "success"
             },
                 function () {
-                    window.location.href = '/Villages/Index/';
+                    $('#myModal').modal('hide');
                 });
             LoadIndexVillage();
-            $('#myModal').modal('hide');
             ClearScreen();
         }
     });
@@ -127,7 +125,7 @@ function Delete(Id) {
                     type: "success"
                 },
                     function () {
-                        window.location.href = '/Villages/Index/';
+                        LoadIndexVillage();
                     });
             },
             error: function (response) {

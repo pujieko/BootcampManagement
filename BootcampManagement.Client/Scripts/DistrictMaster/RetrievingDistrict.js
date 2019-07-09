@@ -54,10 +54,9 @@ function Save() {
                 type: "success"
             },
                 function () {
-                    window.location.href = '/Districts/Index/';
+                    $('#myModal').modal('hide');
                 });
             LoadIndexDistrict();
-            $('#myModal').modal('hide');
             ClearScreen();
         }
     });
@@ -80,10 +79,9 @@ function Edit() {
                 type: "success"
             },
                 function () {
-                    window.location.href = '/Districts/Index/';
+                    $('#myModal').modal('hide');
                 });
             LoadIndexDistrict();
-            $('#myModal').modal('hide');
             ClearScreen();
         }
     });
@@ -127,7 +125,7 @@ function Delete() {
                     type: "success"
                 },
                     function () {
-                        window.location.href = '/Districts/Index/';
+                        LoadIndexDistrict();
                     });
             },
             error: function (response) {

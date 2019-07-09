@@ -18,10 +18,9 @@ function Save() {
                 type: "success"
             },
                 function () {
-                    window.location.href = '/Classes/Index/';
+					$('#myModal').modal('hide');
                 });
             LoadIndexClass();
-            $('#myModal').modal('hide');
             ClearScreen();
         }
     });
@@ -64,10 +63,9 @@ function Edit() {
                 type: "success"
             },
                 function () {
-                    window.location.href = '/Classes/Index/';
-                });
+					$('#myModal').modal('hide');                
+				});
             LoadIndexClass();
-            $('#myModal').modal('hide');
             ClearScreen();
         }
     });
@@ -110,7 +108,7 @@ function Delete(Id) {
                     type: "success"
                 },
                     function () {
-                        window.location.href = '/Classes/Index/';
+                        LoadIndexClass();
                     });
             },
             error: function (response) {

@@ -49,7 +49,7 @@ function Save() {
                 type: "success"
             },
                 function () {
-                    window.location.href = '/Companies/Index/';
+                    $('#myModal').modal('hide');
                 });
             LoadIndexCompany();
             $('#myModal').modal('hide');
@@ -76,10 +76,9 @@ function Edit() {
                 type: "success"
             },
                 function () {
-                    window.location.href = '/Companies/Index/';
-                });
+					$('#myModal').modal('hide');
+				});
             LoadIndexCompany();
-            $('#myModal').modal('hide');
             ClearScreen();
         }
     });
@@ -125,7 +124,7 @@ function Delete() {
                     type: "success"
                 },
                     function () {
-                        window.location.href = '/Companies/Index/';
+                        LoadIndexCompany();
                     });
             },
             error: function (response) {
