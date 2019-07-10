@@ -28,6 +28,7 @@ namespace BootcampManagement.API
             container.RegisterType<IRoomRepository, RoomRepository>();
             container.RegisterType<IClassRepository, ClassRepository>();
             container.RegisterType<IEmployeeRepository, EmployeeRepository>();
+            container.RegisterType<ILockerRepository, LockerRepository>();
 
             container.RegisterType<ILessonService, LessonService>();
             container.RegisterType<IProvinceService, ProvinceService>();
@@ -40,6 +41,7 @@ namespace BootcampManagement.API
             container.RegisterType<IRoomService, RoomService>();
             container.RegisterType<IClassService, ClassService>();
             container.RegisterType<IEmployeeService, EmployeeService>();
+            container.RegisterType<ILockerService, LockerService>();
 
             GlobalConfiguration.Configuration.DependencyResolver = new UnityDependencyResolver(container);
         }
